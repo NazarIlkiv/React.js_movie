@@ -59,6 +59,9 @@ function Homepage() {
     if (!isMovieInFavorites) {
       const newFavouriteList = [...favourites, movie];
       setFavourites(newFavouriteList);
+      alert(`Movie ${movie.Title} added to favourite`);
+    } else {
+      alert("You have already added this movie to favourite");
     }
   };
 
