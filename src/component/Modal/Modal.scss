@@ -1,0 +1,131 @@
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 228, 228, 0.14);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.modal.active {
+  overflow: hidden;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal__content {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #0d0d11;
+}
+
+.details__wrapper {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.movie__image {
+}
+
+.details__body {
+  width: 300px;
+}
+
+.details__text {
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.details-action__button {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.details__button {
+  background: rgba(129, 129, 139, 0.2);
+}
+
+.details__button:hover {
+  background: rgba(129, 129, 139, 1);
+}
+
+@media (max-width: 768.98px) {
+  .details__body {
+    width: 250px;
+  }
+}
+
+@media (max-width: 460.98px) {
+  .details__wrapper {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 430px;
+    max-height: 500px;
+  }
+  .details__body {
+    width: 250px;
+  }
+  .movie__image {
+    max-width: 200px;
+  }
+  .details-title {
+    font-size: 15px;
+  }
+  .details__text {
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .details__button {
+    display: none;
+  }
+}
+
+@media (max-width: 320.98px) {
+  .modal__content {
+    padding: 5px;
+  }
+  .details__wrapper {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 270px;
+    max-height: 500px;
+  }
+  .details__body {
+    width: 200px;
+  }
+  .movie-image__body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .movie__image {
+    max-width: 120px;
+    height: 200px;
+  }
+  .details-title {
+    font-size: 12px;
+  }
+  .details__text {
+    padding: 5px;
+    font-size: 10px;
+    font-weight: 500;
+  }
+  .details__button {
+    display: none;
+  }
+}
